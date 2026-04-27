@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #001731;
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  font-size: 18px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.site-header__logo {
+  flex-shrink: 0;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000985;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-header__nav a {
+  text-decoration: none;
+  color: #000985;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.site-header__nav a:hover {
+  color: #0066cc;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 3px;
+}
+
+/* ===== MAIN ===== */
+.site-main {
+  flex: 1;
+  background-color: #ffffff;
+}
+
+/* ===== HERO (Home) ===== */
+.site-main__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.site-main__hero img {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+}
+
+.hero__caption {
+  color: #474242;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hero__caption a {
+  color: #0066cc;
+}
+
+/* ===== LAUNCH ===== */
+.launch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+.launch__video {
+  width: 100%;
+  height: 600px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.launch__video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== CAR GRID ===== */
+.car-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.car-grid__card {
+  width: 220px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.car-grid__card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.car-grid__card input {
+  display: none;
+}
+
+.car-grid__card-check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.car-grid__card input:checked + .car-grid__card-check {
+  background: #007bff;
+  border-color: #007bff;
+}
+
+.car-grid__card-check::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.car-grid__card input:checked + .car-grid__card-check::after {
+  display: block;
+}
+
+.car-grid__card-name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.car-grid__card-price {
+  color: #333;
+}
+
+.car-grid__card:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+.car-grid__card input:checked ~ .car-grid__card-name,
+.car-grid__card input:checked ~ .car-grid__card-price {
+  color: #007bff;
+}
+
+/* ===== BUTTON ===== */
+.btn--compare {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 12px 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn--compare:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.contact__image img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.contact__form h3 {
+  margin: 0 0 5px;
+  color: #001731;
+}
+
+.contact__form input,
+.contact__form select,
+.contact__form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.contact__form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact__form button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #2f66d0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.contact__form button:hover {
+  background: #1c4db5;
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px 40px;
+  background-color: #001731;
+}
+
+.site-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-footer__social-label {
+  font-weight: bold;
+  color: white;
+}
+
+.site-footer__copyright {
+  text-align: center;
+  color: white;
+  flex: 1;
+  margin: 0;
+}
+
+.site-footer__copyright p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.site-footer__logo {
+  display: block;
+  width: 60px;
+  height: auto;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .site-header__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    font-size: 16px;
+    position: static;
+    transform: none;
+    left: auto;
+    margin: 0 auto;
+  }
+
+  .site-main__hero img {
+    width: 100%;
+  }
+
+  .hero__caption {
+    font-size: 17px;
+  }
+
+  .launch {
+    padding: 15px;
+  }
+
+  .car-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .car-grid__card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px;
+    gap: 25px;
+  }
+
+  .contact__image img {
+    max-width: 280px;
+  }
+
+  .contact__form {
+    max-width: 100%;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .site-footer__social {
+    justify-content: center;
+  }
+
+  .site-footer__logo {
+    width: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-header__nav {
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  .btn--compare {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
