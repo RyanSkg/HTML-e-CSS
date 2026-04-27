@@ -24,7 +24,7 @@ img {
   max-width: 100%;
 }
 
-/* ===== HEADER ===== */
+/* header */
 .site-header {
   display: flex;
   align-items: center;
@@ -65,14 +65,14 @@ img {
   padding-bottom: 3px;
 }
 
-/* ===== MAIN ===== */
+/* main */
 .site-main {
   flex: 1;
   background-color: #ffffff;
 }
 
-/* ===== HERO (Home) ===== */
-.site-main__hero {
+/* home */
+.hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,25 +80,25 @@ img {
   padding: 20px;
 }
 
-.site-main__hero img {
+.hero-section img {
   width: 100%;
   max-width: 1400px;
   height: auto;
 }
 
-.hero__caption {
+.hero-section__texto {
   color: #474242;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
 
-.hero__caption a {
+.hero-section__texto a {
   color: #0066cc;
 }
 
-/* ===== LAUNCH ===== */
-.launch {
+/* lancamento */
+.pagina-lancamento {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -107,21 +107,21 @@ img {
   background-color: #ffffff;
 }
 
-.launch__video {
+.video-container {
   width: 100%;
   height: 600px;
   aspect-ratio: 16/9;
   overflow: hidden;
 }
 
-.launch__video iframe {
+.video-container iframe {
   width: 100%;
   height: 100%;
   border: none;
 }
 
-/* ===== CAR GRID ===== */
-.car-grid {
+/* cards de veiculos */
+.grade-veiculos {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -130,7 +130,7 @@ img {
   padding: 0 20px;
 }
 
-.car-grid__card {
+.veiculo-card {
   flex: 1;
   min-width: 200px;
   max-width: 320px;
@@ -145,16 +145,16 @@ img {
   box-sizing: border-box;
 }
 
-.car-grid__card img {
+.veiculo-card img {
   width: 100%;
   border-radius: 10px;
 }
 
-.car-grid__card input {
+.veiculo-card input {
   display: none;
 }
 
-.car-grid__card-check {
+.veiculo-card__checkbox {
   width: 20px;
   height: 20px;
   border: 2px solid #333;
@@ -164,12 +164,12 @@ img {
   right: 10px;
 }
 
-.car-grid__card input:checked + .car-grid__card-check {
+.veiculo-card input:checked + .veiculo-card__checkbox {
   background: #007bff;
   border-color: #007bff;
 }
 
-.car-grid__card-check::after {
+.veiculo-card__checkbox::after {
   content: "";
   position: absolute;
   display: none;
@@ -182,31 +182,31 @@ img {
   transform: rotate(45deg);
 }
 
-.car-grid__card input:checked + .car-grid__card-check::after {
+.veiculo-card input:checked + .veiculo-card__checkbox::after {
   display: block;
 }
 
-.car-grid__card-name {
+.veiculo-card__nome {
   margin-top: 10px;
   font-weight: bold;
 }
 
-.car-grid__card-price {
+.veiculo-card__preco {
   color: #333;
 }
 
-.car-grid__card:hover {
+.veiculo-card:hover {
   transform: scale(1.05);
   border-color: #007bff;
 }
 
-.car-grid__card input:checked ~ .car-grid__card-name,
-.car-grid__card input:checked ~ .car-grid__card-price {
+.veiculo-card input:checked ~ .veiculo-card__nome,
+.veiculo-card input:checked ~ .veiculo-card__preco {
   color: #007bff;
 }
 
-/* ===== BUTTON ===== */
-.btn--compare {
+/* botao comparar */
+.btn-comparar {
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 12px 30px;
@@ -219,13 +219,13 @@ img {
   transition: 0.3s;
 }
 
-.btn--compare:hover {
+.btn-comparar:hover {
   background-color: #0056b3;
   transform: scale(1.05);
 }
 
-/* ===== CONTACT ===== */
-.contact {
+/* contato */
+.pagina-contato {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -234,14 +234,14 @@ img {
   flex-wrap: wrap;
 }
 
-.contact__image img {
+.contato-imagem img {
   width: 100%;
   max-width: 380px;
   height: auto;
   border-radius: 8px;
 }
 
-.contact__form {
+.contato-formulario {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -249,14 +249,14 @@ img {
   max-width: 320px;
 }
 
-.contact__form h3 {
+.contato-formulario h3 {
   margin: 0 0 5px;
   color: #001731;
 }
 
-.contact__form input,
-.contact__form select,
-.contact__form textarea {
+.contato-formulario input,
+.contato-formulario select,
+.contato-formulario textarea {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -265,12 +265,12 @@ img {
   width: 100%;
 }
 
-.contact__form textarea {
+.contato-formulario textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-.contact__form button {
+.contato-formulario button {
   margin-top: 10px;
   padding: 10px;
   background: #2f66d0;
@@ -282,13 +282,13 @@ img {
   font-size: 16px;
 }
 
-.contact__form button:hover {
+.contato-formulario button:hover {
   background: #1c4db5;
   transform: scale(1.05);
 }
 
-/* ===== FOOTER ===== */
-.site-footer {
+/* rodape */
+.rodape {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -298,36 +298,36 @@ img {
   background-color: #001731;
 }
 
-.site-footer__social {
+.rodape__redes {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.site-footer__social-label {
+.rodape__redes-titulo {
   font-weight: bold;
   color: white;
 }
 
-.site-footer__copyright {
+.rodape__copyright {
   text-align: center;
   color: white;
   flex: 1;
   margin: 0;
 }
 
-.site-footer__copyright p {
+.rodape__copyright p {
   margin: 0;
   font-size: 14px;
 }
 
-.site-footer__logo {
+.rodape__logo {
   display: block;
   width: 60px;
   height: auto;
 }
 
-/* ===== MOBILE ===== */
+/* mobile */
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
@@ -349,44 +349,44 @@ img {
     margin: 0 auto;
   }
 
-  .site-main__hero img {
+  .hero-section img {
     width: 100%;
   }
 
-  .hero__caption {
+  .hero-section__texto {
     font-size: 17px;
   }
 
-  .launch {
+  .pagina-lancamento {
     padding: 15px;
   }
 
-  .car-grid {
+  .grade-veiculos {
     flex-direction: column;
     align-items: center;
   }
 
-  .car-grid__card {
+  .veiculo-card {
     width: 90%;
     max-width: 320px;
   }
 
-  .contact {
+  .pagina-contato {
     flex-direction: column;
     align-items: center;
     padding: 25px 20px;
     gap: 25px;
   }
 
-  .contact__image img {
+  .contato-imagem img {
     max-width: 280px;
   }
 
-  .contact__form {
+  .contato-formulario {
     max-width: 100%;
   }
 
-  .site-footer {
+  .rodape {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -394,11 +394,11 @@ img {
     gap: 12px;
   }
 
-  .site-footer__social {
+  .rodape__redes {
     justify-content: center;
   }
 
-  .site-footer__logo {
+  .rodape__logo {
     width: 50px;
   }
 }
@@ -409,7 +409,7 @@ img {
     gap: 4px;
   }
 
-  .btn--compare {
+  .btn-comparar {
     margin-top: 20px;
     margin-bottom: 40px;
   }
